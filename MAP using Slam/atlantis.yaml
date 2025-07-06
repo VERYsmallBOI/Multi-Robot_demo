@@ -1,0 +1,9 @@
+free_thresh: 0.25
+image: atlantis.pgm
+negate: 0
+occupied_thresh: 0.65
+origin:
+- -9.493736162739037
+- -4.615098447592858
+- 0.0
+resolution: 0.05000000074505806
