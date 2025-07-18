@@ -1,3 +1,8 @@
+Here's your updated **README.md** with a new bullet under **Key Features** and a detailed description of the **DWA Planner** integration:
+
+---
+
+```markdown
 # Multi-Robot TurtleBot 4 ROS 2 Demos (Jazzy)
 
 This repository contains a suite of autonomous navigation and multi-robot coordination demos developed using **TurtleBot 4 Lite** and **ROS 2 Jazzy**. The work showcases scripting-based robot behaviors like motion patterns, pose resets, following logic, and SLAM map generation.
@@ -13,66 +18,67 @@ This repository contains a suite of autonomous navigation and multi-robot coordi
 -  **Robot Following Using Odometry**
 -  **Two-Robot Formation Behavior**
 -  **SLAM Map Generation using `slam_toolbox`**
+-  **Dynamic Window Approach (DWA) Planner** for real-time goal-seeking and obstacle avoidance
 
 > All behaviors are implemented as individual Python ROS 2 packages using `rclpy`.
 
 ---
 
-##  Repository Structure (Simplified)
+## Repository Structure (Simplified)
 
 ```
 
 Multi-Robot-demo/
-├── MAP using Slam/ # Saved maps (.pgm, .yaml)
-├── Media/ # Demo GIFs (square.gif, follower.gif)
+├── MAP using Slam/         # Saved maps (.pgm, .yaml)
+├── Media/                  # Demo GIFs (square.gif, follower.gif)
 |
 src/
-├── square_movement/          # Square path script
-├── zigzag_movement/          # Zigzag motion logic
-├── go_to_point/              # Move to (x, y)
-├── reset_pose/               # Return to origin
-├── robot_follower/           # One robot follows another
-├── robot_formation/          # Two robots move in formation
-├── mimic/                    # Behavior mimicry (e.g., replay motion)
-
+├── square\_movement/        # Square path script
+├── zigzag\_movement/        # Zigzag motion logic
+├── go\_to\_point/            # Move to (x, y)
+├── reset\_pose/             # Return to origin
+├── robot\_follower/         # One robot follows another
+├── robot\_formation/        # Two robots move in formation
+├── mimic/                  # Behavior mimicry (e.g., replay motion)
+├── dwa\_planner/            # Dynamic Window Approach planner (goal + avoidance)
 
 ````
 
 ---
------
 
 ## Running the Demos
 
 To get the demos up and running in this repository:
 
-1.  **Clone the repository:**
-
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/VERYsmallBOI/Multi-Robot-demo.git
     ```
-    
-2.  **Navigate into the workspace:**
 
+2. **Navigate into the workspace:**
     ```bash
     cd Multi-Robot-demo
     ```
 
-3.  **Build and source your workspace:**
-
+3. **Build and source your workspace:**
     ```bash
     colcon build
     source install/setup.bash
     ```
 
-    
-4.  **Run a demo:**
-    For example, to run the square movement demo for `robot2`:
+4. **Run a demo:**
 
+    For example, to run the square movement demo for `robot2`:
     ```bash
     ros2 run square_movement square_driver.py
     ```
 
- **Tip**: Ensure all scripts are executable and ROS dependencies installed (`rclpy`, `geometry_msgs`,`tf-transformations`, etc.).
+    Or to run the **DWA planner** on `robot1`:
+    ```bash
+    ros2 run dwa_planner dwa_leader.py
+    ```
+
+**Tip**: Ensure all scripts are executable and required ROS dependencies (`rclpy`, `geometry_msgs`, `nav_msgs`, `sensor_msgs`, `tf_transformations`) are installed.
 
 ---
 
@@ -83,7 +89,8 @@ This repo includes SLAM-generated maps using `slam_toolbox`. To launch the gener
 ```bash
 ros2 launch turtlebot4_navigation localization.launch.py map:=atlantis.yaml
 ros2 launch turtlebot4_navigation nav2.launch.py
-```
+````
+
 ### Sample SLAM Map
 
 <p align="center">
@@ -92,25 +99,24 @@ ros2 launch turtlebot4_navigation nav2.launch.py
 
 ---
 
-##  Demo Previews
+## Demo Previews
 
-###  Square Path
+### Square Path
 
 <p align="center">
   <img src="Media/square.gif" alt="Square Path" width="400">
 </p>
 
-###  Robot Following
+### Robot Following
 
 <p align="center">
   <img src="Media/follower.gif" alt="Follower" width="400">
 </p>
 
-
 ---
 
-
 ## Requirements
+
 * ROS 2 Jazzy (Ubuntu 24.04)
 * TurtleBot 4 Lite (Create 3 + Raspberry Pi)
 * Python 3.12
@@ -118,7 +124,7 @@ ros2 launch turtlebot4_navigation nav2.launch.py
 
   * `rclpy`, `geometry_msgs`, `nav_msgs`, `sensor_msgs`, `tf_transformations`
 
-Install additional Python dependencies if needed like this(doesn't affect the system-wide python) :
+Install additional Python dependencies if needed:
 
 ```bash
 sudo apt update && sudo apt install ros-jazzy-tf-transformations
@@ -126,12 +132,12 @@ sudo apt update && sudo apt install ros-jazzy-tf-transformations
 
 ---
 
-
 ## Maintainer
 
 **Tamil Selvan**
- [tamilselvanelango3@gmail.com](mailto:tamilselvanelango3@gmail.com)
-
-
+[tamilselvanelango3@gmail.com](mailto:tamilselvanelango3@gmail.com)
 
 ---
+
+```
+
