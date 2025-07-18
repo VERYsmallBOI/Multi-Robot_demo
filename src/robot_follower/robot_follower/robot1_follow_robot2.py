@@ -11,7 +11,7 @@ class RobotFollower(Node):
         super().__init__('robot_follower')
 
         self.robot1_ns = 'robot1'
-        self.robot2_ns = 'robot2'
+        self.robot2_ns = 'robot3'
 
         # Parameters for control
         self.min_distance = 0.3  # meters (minimum distance to maintain)
