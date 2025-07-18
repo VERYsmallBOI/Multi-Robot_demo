@@ -13,6 +13,7 @@ This repository contains a suite of autonomous navigation and multi-robot coordi
 -  **Robot Following Using Odometry**
 -  **Two-Robot Formation Behavior**
 -  **SLAM Map Generation using `slam_toolbox`**
+-  **DWA Planner for Obstacle Avoidance and Goal Navigation**
 
 > All behaviors are implemented as individual Python ROS 2 packages using `rclpy`.
 
