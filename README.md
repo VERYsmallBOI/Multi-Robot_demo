@@ -91,24 +91,43 @@ ros2 launch turtlebot4_navigation nav2.launch.py
   <img src="MAP%20using%20Slam/Atlantis.png" alt="SLAM Map">
 </p>
 
+
 ---
 
-##  Demo Previews
+## Demo Previews
 
-###  Square Path
+### Square Path
 
 <p align="center">
   <img src="Media/square.gif" alt="Square Path" width="400">
 </p>
 
-###  Robot Following
+### Robot Following
 
 <p align="center">
   <img src="Media/follower.gif" alt="Follower" width="400">
 </p>
 
+### DWA Navigation – Scattered Obstacle Space
+
+<p align="center">
+  <img src="Media/dwa_normal.gif" alt="DWA in Open Space" width="400">
+</p>
+
+### DWA Navigation – Maze-Like Environment
+
+<p align="center">
+  <img src="Media/dwa_maze.gif" alt="DWA in Maze" width="400">
+</p>
+
+### Two-Robot Formation Navigation
+
+<p align="center">
+  <img src="Media/Formation.gif" alt="Robot Formation" width="400">
+</p>
 
 ---
+
 
 
 ## Requirements
